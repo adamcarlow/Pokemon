@@ -37,6 +37,9 @@ class Pokemon():
 Charizard = Pokemon('Fire',90,275,'Water','Charizard')
 Snorlax = Pokemon("Colorless",45,350,'Fighting','Snorlax')
 Mew = Pokemon("Psychic",75,240,'Darkness','Mew')
+Moltress = Pokemon('Fire',85,210,'Water','Moltress')
+Pikachu = Pokemon("Electric",60,180,'Ground','Pikachu')
+Aerodactyl = Pokemon("Fighting",70,250,'Grass','Aerodactyl')
 
 characters = [Charizard, Snorlax, Mew]
 
@@ -54,7 +57,7 @@ print('')
 players = [player2,player1]
 first = random.choice(players)
 players2 = players.remove(first)
-second = random.choice(players)
+second = players[0]
 
 print(first.name + ' will go first. ')
 print('')
