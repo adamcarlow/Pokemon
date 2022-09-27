@@ -11,7 +11,7 @@ class Pokemon():
 
     
   def battle(first, second):
-    while first.defense > 0 and second.defense > 0:
+    while (first.defense > 0 and second.defense > 0):
       first_attack = round((first.attack * random.random()),0)
       second.defense = second.defense - first_attack
       second_attack = round((second.attack * random.random()),0)
@@ -21,7 +21,8 @@ class Pokemon():
         print('{p2} has {d2} life left!'.format(p2=second.name,d2=second.defense))
       else:
         print("{p} does ".format(p=first.name) + str(first_attack) + ' damage to {p2}!'.format(p2=second.name))
-        print('{p2} has been defeated!'.format(p2=second.name,d2=second.defense))
+        print('{p2} has been defeated!'.format(p2=second.name,d2=second.defense)) 
+        break
     #while player1.defense > 0: 
       print('')
       if first.defense > 0:
@@ -31,6 +32,7 @@ class Pokemon():
         print("{p} does ".format(p=second.name) + str(second_attack) + ' damage to {p1}!'.format(p1=first.name))
         print('{p1} has been defeated!'.format(p1=first.name,d1=first.defense))
       print('')
+      
     
 
 #print("Creating circle with diameter {d}".format(d=diameter)) 
@@ -41,7 +43,7 @@ Moltress = Pokemon('Fire',85,210,'Water','Moltress')
 Pikachu = Pokemon("Electric",60,180,'Ground','Pikachu')
 Aerodactyl = Pokemon("Fighting",70,250,'Grass','Aerodactyl')
 
-characters = [Charizard, Snorlax, Mew]
+characters = [Charizard, Snorlax, Mew, Moltress, Pikachu, Aerodactyl]
 
 
 player1 = random.choice(characters)
