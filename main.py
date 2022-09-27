@@ -9,6 +9,7 @@ class Pokemon():
     self.weakness = weakness
     self.name = name
 
+    
   def battle(player1, player2):
     while player2.defense > 0: 
       player1_attack = round((player1.attack * random.random()),0)
@@ -25,17 +26,24 @@ class Pokemon():
 Charizard = Pokemon('Fire',120,275,'Water','Charizard')
 Snorlax = Pokemon("Colorless",90,350,'Fighting','Snorlax')
 
+characters = [Charizard, Snorlax]
+#input1 = input("Which character will you choose player1? ")
+#input2 = input("Which character will you choose player2? ")
+player1 = random.choice(characters)
+player2 = random.choice(characters)
+print('Player1 you will be ' + player1.name)
+print('Player2 you will be ' + player2.name)
 #print(Charizard.type)
 #print(Charizard.attack)
 #print(Charizard.defense)
 #print(Charizard.weakness)
 #print(Snorlax.weakness)
-battle1 = Pokemon.battle(Charizard,Snorlax)
-battle2 = Pokemon.battle(Charizard,Snorlax)
-battle3 = Pokemon.battle(Charizard,Snorlax)
-battle4 = Pokemon.battle(Charizard,Snorlax)
-battle5 = Pokemon.battle(Charizard,Snorlax)
-battle6 = Pokemon.battle(Charizard,Snorlax)
+battle1 = Pokemon.battle(player1,player2)
+battle2 = Pokemon.battle(player1,player2)
+battle3 = Pokemon.battle(player1,player2)
+battle4 = Pokemon.battle(player1,player2)
+battle5 = Pokemon.battle(player1,player2)
+battle6 = Pokemon.battle(player1,player2)
 #print(Snorlax.type)
 #print(Snorlax.attack)
 #print(Snorlax.defense)
